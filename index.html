@@ -3,149 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jorge Babalfi - Interactive CV App</title>
+    <title>Jorge Babalfi | Aplicación CV Interactiva</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="app-container">
         <aside class="sidebar">
-            <div class="profile-section">
-                <div class="profile-photo">
-                    <img src="tu-foto.jpg" alt="Jorge Andrés Babalfi">
+            <div class="profile-card">
+                <div class="photo-frame">
+                    <img src="perfil.jpg" alt="Jorge Babalfi" onerror="this.style.display='none'">
+                    <i class="fas fa-user-tie default-icon"></i>
                 </div>
                 <h1>Jorge Andrés Babalfi</h1>
                 <p class="tagline">Estratega en IA & Gestión Empresarial</p>
             </div>
-
-            <nav class="app-nav">
-                <button onclick="showSection('perfil')" class="nav-btn active">Perfil</button>
-                <button onclick="showSection('experiencia')" class="nav-btn">Experiencia</button>
-                <button onclick="showSection('formacion')" class="nav-btn">Formación e IA</button>
-                <button onclick="showSection('certificaciones')" class="nav-btn">Cursos y Otros</button>
+            <nav class="nav-menu">
+                <button onclick="showTab('perfil')" class="nav-item active"><i class="fas fa-id-card"></i> Perfil</button>
+                <button onclick="showTab('experiencia')" class="nav-item"><i class="fas fa-history"></i> Trayectoria Laboral</button>
+                <button onclick="showTab('academica')" class="nav-item"><i class="fas fa-university"></i> Formación Académica</button>
+                <button onclick="showTab('tecnica')" class="nav-item"><i class="fas fa-microchip"></i> IA & Especialización</button>
+                <button onclick="showTab('cursos')" class="nav-item"><i class="fas fa-certificate"></i> Cursos & Otros</button>
             </nav>
-
-            <div class="contact-info">
-                <p><strong>Email:</strong> jbabalfi@gmail.com</p>
-                <p><strong>Tel:</strong> +54 9 351 5408795</p>
-                <p><strong>Ubicación:</strong> Córdoba, Argentina</p>
-                <p><strong>Idiomas:</strong> Español, Inglés, Italiano, Portugués</p>
+            <div class="contact-footer">
+                <p><i class="fas fa-phone"></i> +54 9 351 5408795</p>
+                <p><i class="fas fa-envelope"></i> jbabalfi@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Córdoba, Argentina</p>
             </div>
         </aside>
 
-        <main class="content-panel">
-            <section id="perfil" class="content-section active">
-                <h2>Sobre Mí</h2>
+        <main class="content-view">
+            <section id="perfil" class="tab-pane active">
+                <h2 class="section-title">Perfil Profesional</h2>
                 <div class="card">
-                    <p>Profesional multidisciplinario con más de 25 años de trayectoria liderando la intersección entre la tecnología de vanguardia y la gestión empresarial. Experto en la dirección de PyMEs y la fundación de startups tecnológicas, con una formación reciente en Inteligencia Artificial Avanzada (2026).</p>
-                    <p>Poseo una capacidad única para traducir necesidades técnicas complejas en soluciones comerciales rentables, potenciada por una formación como Coach Ontológico.</p>
-                </div>
-                <h3>Aptitudes Clave</h3>
-                <div class="skills-grid">
-                    <span>Proactividad Estratégica</span>
-                    <span>Orientación a Resultados</span>
-                    <span>Resiliencia Empresarial</span>
-                    <span>Visión Sistémica</span>
-                    <span>Comunicación Asertiva</span>
-                    <span>Gestión de la Incertidumbre</span>
+                    <p>Profesional multidisciplinario con más de 25 años de trayectoria liderando la intersección entre tecnología de vanguardia y gestión empresarial. Experto en dirección de PyMEs y fundación de startups, con especialización en <strong>IA Avanzada (2026)</strong>.</p>
+                    <h3>Aptitudes</h3>
+                    <div class="tag-cloud">
+                        <span>Proactividad Estratégica</span><span>Resiliencia</span><span>Visión Sistémica</span>
+                        <span>Comunicación Asertiva</span><span>Liderazgo de Equipos</span><span>Gestión del Cambio</span>
+                    </div>
                 </div>
             </section>
 
-            <section id="experiencia" class="content-section">
-                <h2>Trayectoria Profesional</h2>
+            <section id="experiencia" class="tab-pane">
+                <h2 class="section-title">Experiencia Laboral Detallada</h2>
                 
-                <div class="timeline-item">
-                    <span class="date">2020 - Actualidad</span>
-                    <h3>Gerente Comercial y Marketing</h3>
-                    <h4 class="company">GRUPO PLENOS</h4>
-                    <ul>
-                        <li>Coordinación y gestión Comercial/Marketing.</li>
-                        <li>Desarrollo de nuevos productos y mercados.</li>
-                        <li>Gestión Tecnología de la empresa.</li>
+                <div class="job-item">
+                    <div class="job-header"><h3>Gerente Comercial y Marketing</h3><span>2020 - Presente</span></div>
+                    <p class="company">GRUPO PLENOS</p>
+                    <p>Coordinación comercial, desarrollo de nuevos productos/mercados y gestión tecnológica.</p>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-header"><h3>Vicepresidente / Vocal</h3><span>2013 - Presente</span></div>
+                    <p class="company">CIDI (Cámara de Informática del Interior)</p>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-header"><h3>Socio Fundador y CEO</h3><span>2001 - 2020</span></div>
+                    <p class="company">HB SOLUCIONES</p>
+                    <p>Dirección integral: gestión financiera, compras y tecnología por dos décadas.</p>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-header"><h3>Socio Fundador y CEO</h3><span>2019 - 2021</span></div>
+                    <p class="company">ALAS MULTIESPACIO</p>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-header"><h3>Ingeniería de Clientes</h3><span>1999 - 2002</span></div>
+                    <p class="company">TELEFÓNICA DATA</p>
+                    <p>Desarrollo de redes WAN nacionales e internacionales. Dictado de seminarios técnicos.</p>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-header"><h3>Asistencia Técnica y Ventas</h3><span>1994 - 1999</span></div>
+                    <p class="company">CABLEVISIÓN</p>
+                </div>
+
+                <div class="job-item">
+                    <div class="job-header"><h3>Técnico Electrónico</h3><span>1992 - 1994</span></div>
+                    <p class="company">RGB ELECTRÓNICA / STAK AUDIO</p>
+                </div>
+            </section>
+
+            <section id="academica" class="tab-pane">
+                <h2 class="section-title">Formación Académica</h2>
+                <div class="card">
+                    <div class="edu-item">
+                        <h3>Analista de Sistemas Informáticos</h3>
+                        <p>Universidad Blas Pascal (2001)</p>
+                    </div>
+                    <div class="edu-item">
+                        <h3>Coach Ontológico Profesional</h3>
+                        <p>Fundación Despegar (2012)</p>
+                    </div>
+                    <div class="edu-item">
+                        <h3>Ingeniería Electrónica</h3>
+                        <p>Universidad Nacional de Córdoba (1991-1996) - Cursado completo</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tecnica" class="tab-pane">
+                <h2 class="section-title">IA & Tecnología Avanzada</h2>
+                <div class="card highlight">
+                    <h3>Diplomatura en Automatización con IA (2026)</h3>
+                    <p>EGCI Escuela de Gerencia. Especialista en Modelos LLM, Agentes y Prompt Engineering.</p>
+                </div>
+                <div class="skill-grid">
+                    <div class="skill-box"><h4>Redes & Datos</h4><p>CCNA Cisco, Lucent Technologies (Switching, Cableado, Wireless), Nortel Exchange '99.</p></div>
+                    <div class="skill-box"><h4>Sistemas</h4><p>Oracle 9i, SQL, Windows 95, ADSL/ATM/Frame Relay.</p></div>
+                </div>
+            </section>
+
+            <section id="cursos" class="tab-pane">
+                <h2 class="section-title">Certificaciones, Cursos e Intereses</h2>
+                <div class="card">
+                    <h3>Tecnología y Negociación</h3>
+                    <p>Seguridad de Redes (Siglo XXI), Negociación Efectiva (Tec Consultora), Redes Satelitales (U. Politécnica de Madrid).</p>
+                </div>
+                <div class="card">
+                    <h3>Intereses y Actividades</h3>
+                    <ul class="hobbies-list">
+                        <li><i class="fas fa-broadcast-tower"></i> <strong>Radioaficionado:</strong> Licencia CNT / Radio Club Córdoba.</li>
+                        <li><i class="fas fa-ship"></i> <strong>Timonel de Yate:</strong> Prefectura Nacional (2012).</li>
+                        <li><i class="fas fa-wine-glass-alt"></i> <strong>Catación de Vinos:</strong> Bodegas Salentein (2001).</li>
+                        <li><i class="fas fa-microphone"></i> <strong>Operación de Radio y TV:</strong> Universidad Blas Pascal.</li>
                     </ul>
                 </div>
-
-                <div class="timeline-item">
-                    <span class="date">2013 - Actualidad</span>
-                    <h3>Vicepresidente / Vocal</h3>
-                    <h4 class="company">CIDI (Cámara de Informática del Interior)</h4>
-                </div>
-
-                <div class="timeline-item">
-                    <span class="date">2001 - 2020</span>
-                    <h3>Socio Fundador y CEO</h3>
-                    <h4 class="company">HB SOLUCIONES</h4>
-                    <p>Liderazgo de coordinación comercial, financiera, gestión de compras y desarrollo tecnológico por dos décadas.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <span class="date">1999 - 2002</span>
-                    <h3>Ingeniería de Clientes</h3>
-                    <h4 class="company">TELEFÓNICA DATA</h4>
-                    <p>Desarrollo de redes de datos WAN nacionales e internacionales.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <span class="date">1994 - 1999</span>
-                    <h3>Asistencia Técnica y Ventas</h3>
-                    <h4 class="company">CABLEVISIÓN</h4>
-                </div>
-            </section>
-
-            <section id="formacion" class="content-section">
-                <h2>Formación e Inteligencia Artificial</h2>
-                <div class="card highlight">
-                    <h3>Diplomatura en Automatización con IA</h3>
-                    <p>EGCI Escuela de Gerencia (2026)</p>
-                    <div class="skills-grid">
-                        <span>Modelos LLM</span>
-                        <span>Desarrollo de Agentes</span>
-                        <span>Prompt Engineering</span>
-                        <span>Automatización de Workflows</span>
-                    </div>
-                </div>
                 <div class="card">
-                    <h3>Analista de Sistemas Informáticos</h3>
-                    <p>Universidad Blas Pascal (2001)</p>
-                </div>
-                <div class="card">
-                    <h3>Coach Ontológico Profesional</h3>
-                    <p>Fundación Despegar (2012)</p>
-                </div>
-                <div class="card">
-                    <h3>Ingeniería Electrónica</h3>
-                    <p>Universidad Nacional de Córdoba (1991-1996)</p>
-                </div>
-            </section>
-
-            <section id="certificaciones" class="content-section">
-                <h2>Certificaciones y Otros</h2>
-                <div class="grid">
-                    <div class="mini-card">
-                        <h4>Tecnología</h4>
-                        <ul>
-                            <li>CCNA Cisco Systems</li>
-                            <li>Oracle 9i</li>
-                            <li>Lucent Technologies (Cableado/Wireless)</li>
-                            <li>Microsoft Exchange '99</li>
-                        </ul>
-                    </div>
-                    <div class="mini-card">
-                        <h4>Gestión y Humano</h4>
-                        <ul>
-                            <li>Negociación Efectiva (Tec Consultora)</li>
-                            <li>PNL y Eneagrama</li>
-                            <li>Liderazgo y Seguridad en Redes</li>
-                        </ul>
-                    </div>
-                    <div class="mini-card">
-                        <h4>Intereses</h4>
-                        <ul>
-                            <li>Licencia de Radioaficionado (CNT)</li>
-                            <li>Curso de Timonel (Prefectura Nacional)</li>
-                            <li>Catación de Vinos (Bodegas Salentein)</li>
-                        </ul>
-                    </div>
+                    <h3>Idiomas</h3>
+                    <p>Español (Nativo) | Inglés (Medio) | Italiano (Medio) | Portugués (Básico)</p>
                 </div>
             </section>
         </main>
