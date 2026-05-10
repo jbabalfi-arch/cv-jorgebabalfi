@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Babalfi - Interactive CV App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-photo">
+                    <img src="tu-foto.jpg" alt="Jorge Andrés Babalfi">
+                </div>
+                <h1>Jorge Andrés Babalfi</h1>
+                <p class="tagline">Estratega en IA & Gestión Empresarial</p>
+            </div>
+
+            <nav class="app-nav">
+                <button onclick="showSection('perfil')" class="nav-btn active">Perfil</button>
+                <button onclick="showSection('experiencia')" class="nav-btn">Experiencia</button>
+                <button onclick="showSection('formacion')" class="nav-btn">Formación e IA</button>
+                <button onclick="showSection('certificaciones')" class="nav-btn">Cursos y Otros</button>
+            </nav>
+
+            <div class="contact-info">
+                <p><strong>Email:</strong> jbabalfi@gmail.com</p>
+                <p><strong>Tel:</strong> +54 9 351 5408795</p>
+                <p><strong>Ubicación:</strong> Córdoba, Argentina</p>
+                <p><strong>Idiomas:</strong> Español, Inglés, Italiano, Portugués</p>
+            </div>
+        </aside>
+
+        <main class="content-panel">
+            <section id="perfil" class="content-section active">
+                <h2>Sobre Mí</h2>
+                <div class="card">
+                    <p>Profesional multidisciplinario con más de 25 años de trayectoria liderando la intersección entre la tecnología de vanguardia y la gestión empresarial. Experto en la dirección de PyMEs y la fundación de startups tecnológicas, con una formación reciente en Inteligencia Artificial Avanzada (2026).</p>
+                    <p>Poseo una capacidad única para traducir necesidades técnicas complejas en soluciones comerciales rentables, potenciada por una formación como Coach Ontológico.</p>
+                </div>
+                <h3>Aptitudes Clave</h3>
+                <div class="skills-grid">
+                    <span>Proactividad Estratégica</span>
+                    <span>Orientación a Resultados</span>
+                    <span>Resiliencia Empresarial</span>
+                    <span>Visión Sistémica</span>
+                    <span>Comunicación Asertiva</span>
+                    <span>Gestión de la Incertidumbre</span>
+                </div>
+            </section>
+
+            <section id="experiencia" class="content-section">
+                <h2>Trayectoria Profesional</h2>
+                
+                <div class="timeline-item">
+                    <span class="date">2020 - Actualidad</span>
+                    <h3>Gerente Comercial y Marketing</h3>
+                    <h4 class="company">GRUPO PLENOS</h4>
+                    <ul>
+                        <li>Coordinación y gestión Comercial/Marketing.</li>
+                        <li>Desarrollo de nuevos productos y mercados.</li>
+                        <li>Gestión Tecnología de la empresa.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="date">2013 - Actualidad</span>
+                    <h3>Vicepresidente / Vocal</h3>
+                    <h4 class="company">CIDI (Cámara de Informática del Interior)</h4>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="date">2001 - 2020</span>
+                    <h3>Socio Fundador y CEO</h3>
+                    <h4 class="company">HB SOLUCIONES</h4>
+                    <p>Liderazgo de coordinación comercial, financiera, gestión de compras y desarrollo tecnológico por dos décadas.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="date">1999 - 2002</span>
+                    <h3>Ingeniería de Clientes</h3>
+                    <h4 class="company">TELEFÓNICA DATA</h4>
+                    <p>Desarrollo de redes de datos WAN nacionales e internacionales.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="date">1994 - 1999</span>
+                    <h3>Asistencia Técnica y Ventas</h3>
+                    <h4 class="company">CABLEVISIÓN</h4>
+                </div>
+            </section>
+
+            <section id="formacion" class="content-section">
+                <h2>Formación e Inteligencia Artificial</h2>
+                <div class="card highlight">
+                    <h3>Diplomatura en Automatización con IA</h3>
+                    <p>EGCI Escuela de Gerencia (2026)</p>
+                    <div class="skills-grid">
+                        <span>Modelos LLM</span>
+                        <span>Desarrollo de Agentes</span>
+                        <span>Prompt Engineering</span>
+                        <span>Automatización de Workflows</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Analista de Sistemas Informáticos</h3>
+                    <p>Universidad Blas Pascal (2001)</p>
+                </div>
+                <div class="card">
+                    <h3>Coach Ontológico Profesional</h3>
+                    <p>Fundación Despegar (2012)</p>
+                </div>
+                <div class="card">
+                    <h3>Ingeniería Electrónica</h3>
+                    <p>Universidad Nacional de Córdoba (1991-1996)</p>
+                </div>
+            </section>
+
+            <section id="certificaciones" class="content-section">
+                <h2>Certificaciones y Otros</h2>
+                <div class="grid">
+                    <div class="mini-card">
+                        <h4>Tecnología</h4>
+                        <ul>
+                            <li>CCNA Cisco Systems</li>
+                            <li>Oracle 9i</li>
+                            <li>Lucent Technologies (Cableado/Wireless)</li>
+                            <li>Microsoft Exchange '99</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <h4>Gestión y Humano</h4>
+                        <ul>
+                            <li>Negociación Efectiva (Tec Consultora)</li>
+                            <li>PNL y Eneagrama</li>
+                            <li>Liderazgo y Seguridad en Redes</li>
+                        </ul>
+                    </div>
+                    <div class="mini-card">
+                        <h4>Intereses</h4>
+                        <ul>
+                            <li>Licencia de Radioaficionado (CNT)</li>
+                            <li>Curso de Timonel (Prefectura Nacional)</li>
+                            <li>Catación de Vinos (Bodegas Salentein)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
